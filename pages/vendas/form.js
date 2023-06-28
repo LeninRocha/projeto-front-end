@@ -31,7 +31,7 @@ const form = () => {
     const existeCliente = cliente.some((item) => item.cpf.includes(dados.cliente));
     const existeProduto = estoque.some((item) => item.codigo.includes(dados.codigo));
 
-
+    console.log("dados", dados)
     const data = {
       vendedor: '',
       cliente: '',
@@ -62,7 +62,7 @@ const form = () => {
 
         for (let index = 0; index < vendedores.length; index++) {
           const element = vendedores[index];
-          if(element.codigo == dados.codigo){
+          if(element.codigo == dados.vendedor){
             data.vendedor = element.nome
           }
 
